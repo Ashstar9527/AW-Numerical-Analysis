@@ -54,6 +54,6 @@ plot(x_vals, ((1+sqrt(5))/2)*x_vals, '.--');    % Secant
 % Customize plot
 xlabel('log(e_{k-1})');
 ylabel('log(e_k)');
-legend('Newton', 'Bisection', 'Secant', 'p = 1', 'p = 2', 'p = (1+sqrt(5))/2', 'Location', 'best');
-title('Convergence Order Visualization');
+legend('Bisection', 'Newton', 'Secant', 'p = 1', 'p = 2', 'p = (1+sqrt(5))/2', 'Location', 'best');
+title('Convergence Order');
 grid on;
