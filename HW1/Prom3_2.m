@@ -1,3 +1,4 @@
+% Problem 3(c)
 % Function
 f = @(x) cos(exp(x));
 itermax = 50;
