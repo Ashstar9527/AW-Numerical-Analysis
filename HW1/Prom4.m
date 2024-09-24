@@ -40,12 +40,12 @@ disp(x_pre)
 % Setting
 a1 = -0.75;
 b1 = -0.5;
-a2 = -1;
+a2 = -0.75;
 b2 = -0.5;
 
 % Run the functions
-[x1, niter1, xiter1] = bisection_tol(f,a1,b1,itermax,tol);
-[x2, niter2, xiter2] = newton_tol(f,fp,x1,itermax, 10^-12);
-[x3, niter3, xiter3] = bisection_tol(f,a2,b2,100,10^-12);
+[x1, xiter1, niter1] = bisection_tol(f,a1,b1,itermax,tol);
+[x2, xiter2, niter2] = newton_tol(f,fp,x1,itermax, 10^-12);
+[x3, xiter3, niter3] = bisection_tol(f,a2,b2,100,10^-12);
 disp(niter3)
 
