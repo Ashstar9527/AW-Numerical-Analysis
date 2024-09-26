@@ -38,3 +38,6 @@ error_sec = x_sec - x_exact;
 disp(['3. Error of Secant Method: ', num2str(error_sec)]);
 result = (error_sec < tol);
 disp(['     Is error of Secant smaller than the tolerance? ', num2str(result)]);
+fprintf('%.15f\n', error_bisect);
+fprintf('%.15f\n', error_newt);
+fprintf('%.15f\n', error_sec);

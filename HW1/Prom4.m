@@ -47,5 +47,7 @@ b2 = -0.5;
 [x1, xiter1, niter1] = bisection_tol(f,a1,b1,itermax,tol);
 [x2, xiter2, niter2] = newton_tol(f,fp,x1,itermax, 10^-12);
 [x3, xiter3, niter3] = bisection_tol(f,a2,b2,100,10^-12);
+disp(niter1)
+disp(niter2)
 disp(niter3)
 
