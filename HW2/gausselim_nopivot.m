@@ -1,4 +1,4 @@
-% Gaussian elimination for Ax=b without pivoting
+%% Gaussian elimination for Ax=b without pivoting
 %
 % Inputs
 % A         Matrix of linear system

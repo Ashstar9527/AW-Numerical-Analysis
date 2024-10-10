@@ -1,3 +1,4 @@
+%% Problem 1_d
 % Define the functions
 f = @(x) exp(x) - x.^2 - 6*x - 9;  
 g = @(x) 2 * log(x+3); 

@@ -3,8 +3,8 @@ f = @(x) exp(x) - x.^2 - 6*x - 9;
 g = @(x) 2 * log(x+3);  
 
 % Define the range for x and y
-xiter = -3:0.01:8;  % x values
-gxiter = g(xiter);  % g(x) values
+xiter = -3:0.01:8; 
+gxiter = g(xiter); 
 
 % Plot
 figure(1)

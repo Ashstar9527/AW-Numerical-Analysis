@@ -1,6 +1,5 @@
 %% Problem 2_c
-% Define the function
-function [x1,x2,niter] = r_newton(f1,f2,df11,df12,df21,df22,x1,x2);
+function [x1,x2,niter,error] = r_newton(f1,f2,df11,df12,df21,df22,x1,x2);
 % Input:
 % f1, f2: original functions
 % df11, df12, df21, df22: partial derivative that form jacobian matrix 
@@ -8,10 +7,11 @@ function [x1,x2,niter] = r_newton(f1,f2,df11,df12,df21,df22,x1,x2);
 % Output:
 % x1, x2: final solutions
 % niter: number of iteration
+% error: residual error
 
     niter = 0;
     % Iterate until Euclidean norm smaller than tolerance
-    while abs((dot(f1(x1,x2),f1(x1,x2))) + (dot(f2(x1,x2),f2(x1,x2)))) >= 10^-20
+    while abs((dot(f1(x1,x2), f1(x1,x2))) + (dot(f2(x1,x2), f2(x1,x2)))) >= 10^-20
         fk = [f1(x1,x2); f2(x1,x2)];
         Jac = [df11(x1,x2), df12(x1,x2); df21(x1,x2), df22(x1,x2)];
         delta = Jac\fk;
@@ -21,7 +21,7 @@ function [x1,x2,niter] = r_newton(f1,f2,df11,df12,df21,df22,x1,x2);
 
         niter = niter + 1;
 
-        res = sqrt(f1(x1,x2)^2 + f2(x1,x2).^2);
+        error = sqrt(f1(x1,x2)^2 + f2(x1,x2).^2);
     end
 end
 
@@ -39,12 +39,12 @@ x1 = 0.103;
 x2 = 0.241;
 
 % Launch the function
-[x1,x2,niter] = r_newton(f1, f2, df11, df12, df21, df22, x1, x2);
+[x1,x2,niter,error] = r_newton(f1,f2,df11,df12,df21,df22,x1,x2);
 
 % Print results
 fprintf("Solution: (%.10f,%.10f)\n", x1, x2);
 fprintf("Num of iteration: %d\n", niter);
-fprintf("Residual error: %.12f\n", res);
+fprintf("Residual error: %.12f\n", error);
 
 
 

@@ -28,7 +28,6 @@ for j=1:n-1
 
         % L part
         L(i,j) = c; % Return modified L
-
     end
 end
 
