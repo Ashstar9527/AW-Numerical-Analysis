@@ -35,3 +35,4 @@ U = triu(A);   % Upper triangular part of A
 y = b;         % Transformed right-hand side
 
 end
+
